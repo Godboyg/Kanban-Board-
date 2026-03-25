@@ -27,7 +27,6 @@ function App() {
   const handleClose = (val: boolean) => {
     try {
       setOpen(val);
-      setCurrent();
     } catch(Eror) {
       console.log(Eror);
     }
