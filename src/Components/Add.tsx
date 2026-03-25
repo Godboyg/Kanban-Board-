@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { addTask } from '../features/boardSlice';
 import type { ColumnType } from '../features/types';

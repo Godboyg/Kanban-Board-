@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import "./index.css"
 import 'remixicon/fonts/remixicon.css'
 import Add from './Components/Add';
@@ -9,7 +9,7 @@ import { deleteTask, moveTask } from './features/boardSlice';
 function App() {
 
   const [open , setOpen] = useState<boolean>(false);
-  const [current , setCurrent] = useState<ColumnType | "">("")
+  const [current , setCurrent] = useState<ColumnType>()
 
   const dispatch = useAppDispatch();
 
@@ -339,7 +339,7 @@ function App() {
           </div>
         </div>
          {
-          open && <Add close={handleClose} current={current}/>
+          open && <Add close={handleClose} current={current!}/>
          }
       </div>
     </div>
